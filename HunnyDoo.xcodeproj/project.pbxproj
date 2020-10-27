@@ -1,0 +1,593 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AC812AF92548C5B20096A1A8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AC812AF82548C5B20096A1A8 /* AppDelegate.m */; };
+		AC812AFC2548C5B20096A1A8 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AC812AFB2548C5B20096A1A8 /* SceneDelegate.m */; };
+		AC812AFF2548C5B20096A1A8 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AC812AFE2548C5B20096A1A8 /* ViewController.m */; };
+		AC812B022548C5B20096A1A8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC812B002548C5B20096A1A8 /* Main.storyboard */; };
+		AC812B042548C5B30096A1A8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC812B032548C5B30096A1A8 /* Assets.xcassets */; };
+		AC812B072548C5B30096A1A8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC812B052548C5B30096A1A8 /* LaunchScreen.storyboard */; };
+		AC812B0A2548C5B30096A1A8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AC812B092548C5B30096A1A8 /* main.m */; };
+		AC812B142548C5B30096A1A8 /* HunnyDooTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AC812B132548C5B30096A1A8 /* HunnyDooTests.m */; };
+		AC812B1F2548C5B30096A1A8 /* HunnyDooUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = AC812B1E2548C5B30096A1A8 /* HunnyDooUITests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		AC812B102548C5B30096A1A8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AC812AEC2548C5B20096A1A8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AC812AF32548C5B20096A1A8;
+			remoteInfo = HunnyDoo;
+		};
+		AC812B1B2548C5B30096A1A8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AC812AEC2548C5B20096A1A8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AC812AF32548C5B20096A1A8;
+			remoteInfo = HunnyDoo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		AC812AF42548C5B20096A1A8 /* HunnyDoo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HunnyDoo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AC812AF72548C5B20096A1A8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		AC812AF82548C5B20096A1A8 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		AC812AFA2548C5B20096A1A8 /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
+		AC812AFB2548C5B20096A1A8 /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
+		AC812AFD2548C5B20096A1A8 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		AC812AFE2548C5B20096A1A8 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		AC812B012548C5B20096A1A8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		AC812B032548C5B30096A1A8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AC812B062548C5B30096A1A8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		AC812B082548C5B30096A1A8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AC812B092548C5B30096A1A8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		AC812B0F2548C5B30096A1A8 /* HunnyDooTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HunnyDooTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AC812B132548C5B30096A1A8 /* HunnyDooTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HunnyDooTests.m; sourceTree = "<group>"; };
+		AC812B152548C5B30096A1A8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AC812B1A2548C5B30096A1A8 /* HunnyDooUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HunnyDooUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AC812B1E2548C5B30096A1A8 /* HunnyDooUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HunnyDooUITests.m; sourceTree = "<group>"; };
+		AC812B202548C5B30096A1A8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AC812AF12548C5B20096A1A8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AC812B0C2548C5B30096A1A8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AC812B172548C5B30096A1A8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		AC812AEB2548C5B20096A1A8 = {
+			isa = PBXGroup;
+			children = (
+				AC812AF62548C5B20096A1A8 /* HunnyDoo */,
+				AC812B122548C5B30096A1A8 /* HunnyDooTests */,
+				AC812B1D2548C5B30096A1A8 /* HunnyDooUITests */,
+				AC812AF52548C5B20096A1A8 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		AC812AF52548C5B20096A1A8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AC812AF42548C5B20096A1A8 /* HunnyDoo.app */,
+				AC812B0F2548C5B30096A1A8 /* HunnyDooTests.xctest */,
+				AC812B1A2548C5B30096A1A8 /* HunnyDooUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AC812AF62548C5B20096A1A8 /* HunnyDoo */ = {
+			isa = PBXGroup;
+			children = (
+				AC812AF72548C5B20096A1A8 /* AppDelegate.h */,
+				AC812AF82548C5B20096A1A8 /* AppDelegate.m */,
+				AC812AFA2548C5B20096A1A8 /* SceneDelegate.h */,
+				AC812AFB2548C5B20096A1A8 /* SceneDelegate.m */,
+				AC812AFD2548C5B20096A1A8 /* ViewController.h */,
+				AC812AFE2548C5B20096A1A8 /* ViewController.m */,
+				AC812B002548C5B20096A1A8 /* Main.storyboard */,
+				AC812B032548C5B30096A1A8 /* Assets.xcassets */,
+				AC812B052548C5B30096A1A8 /* LaunchScreen.storyboard */,
+				AC812B082548C5B30096A1A8 /* Info.plist */,
+				AC812B092548C5B30096A1A8 /* main.m */,
+			);
+			path = HunnyDoo;
+			sourceTree = "<group>";
+		};
+		AC812B122548C5B30096A1A8 /* HunnyDooTests */ = {
+			isa = PBXGroup;
+			children = (
+				AC812B132548C5B30096A1A8 /* HunnyDooTests.m */,
+				AC812B152548C5B30096A1A8 /* Info.plist */,
+			);
+			path = HunnyDooTests;
+			sourceTree = "<group>";
+		};
+		AC812B1D2548C5B30096A1A8 /* HunnyDooUITests */ = {
+			isa = PBXGroup;
+			children = (
+				AC812B1E2548C5B30096A1A8 /* HunnyDooUITests.m */,
+				AC812B202548C5B30096A1A8 /* Info.plist */,
+			);
+			path = HunnyDooUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AC812AF32548C5B20096A1A8 /* HunnyDoo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AC812B232548C5B30096A1A8 /* Build configuration list for PBXNativeTarget "HunnyDoo" */;
+			buildPhases = (
+				AC812AF02548C5B20096A1A8 /* Sources */,
+				AC812AF12548C5B20096A1A8 /* Frameworks */,
+				AC812AF22548C5B20096A1A8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HunnyDoo;
+			productName = HunnyDoo;
+			productReference = AC812AF42548C5B20096A1A8 /* HunnyDoo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		AC812B0E2548C5B30096A1A8 /* HunnyDooTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AC812B262548C5B30096A1A8 /* Build configuration list for PBXNativeTarget "HunnyDooTests" */;
+			buildPhases = (
+				AC812B0B2548C5B30096A1A8 /* Sources */,
+				AC812B0C2548C5B30096A1A8 /* Frameworks */,
+				AC812B0D2548C5B30096A1A8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AC812B112548C5B30096A1A8 /* PBXTargetDependency */,
+			);
+			name = HunnyDooTests;
+			productName = HunnyDooTests;
+			productReference = AC812B0F2548C5B30096A1A8 /* HunnyDooTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		AC812B192548C5B30096A1A8 /* HunnyDooUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AC812B292548C5B30096A1A8 /* Build configuration list for PBXNativeTarget "HunnyDooUITests" */;
+			buildPhases = (
+				AC812B162548C5B30096A1A8 /* Sources */,
+				AC812B172548C5B30096A1A8 /* Frameworks */,
+				AC812B182548C5B30096A1A8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AC812B1C2548C5B30096A1A8 /* PBXTargetDependency */,
+			);
+			name = HunnyDooUITests;
+			productName = HunnyDooUITests;
+			productReference = AC812B1A2548C5B30096A1A8 /* HunnyDooUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AC812AEC2548C5B20096A1A8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1210;
+				TargetAttributes = {
+					AC812AF32548C5B20096A1A8 = {
+						CreatedOnToolsVersion = 12.1;
+					};
+					AC812B0E2548C5B30096A1A8 = {
+						CreatedOnToolsVersion = 12.1;
+						TestTargetID = AC812AF32548C5B20096A1A8;
+					};
+					AC812B192548C5B30096A1A8 = {
+						CreatedOnToolsVersion = 12.1;
+						TestTargetID = AC812AF32548C5B20096A1A8;
+					};
+				};
+			};
+			buildConfigurationList = AC812AEF2548C5B20096A1A8 /* Build configuration list for PBXProject "HunnyDoo" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = AC812AEB2548C5B20096A1A8;
+			productRefGroup = AC812AF52548C5B20096A1A8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AC812AF32548C5B20096A1A8 /* HunnyDoo */,
+				AC812B0E2548C5B30096A1A8 /* HunnyDooTests */,
+				AC812B192548C5B30096A1A8 /* HunnyDooUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AC812AF22548C5B20096A1A8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AC812B072548C5B30096A1A8 /* LaunchScreen.storyboard in Resources */,
+				AC812B042548C5B30096A1A8 /* Assets.xcassets in Resources */,
+				AC812B022548C5B20096A1A8 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AC812B0D2548C5B30096A1A8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AC812B182548C5B30096A1A8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AC812AF02548C5B20096A1A8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AC812AFF2548C5B20096A1A8 /* ViewController.m in Sources */,
+				AC812AF92548C5B20096A1A8 /* AppDelegate.m in Sources */,
+				AC812B0A2548C5B30096A1A8 /* main.m in Sources */,
+				AC812AFC2548C5B20096A1A8 /* SceneDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AC812B0B2548C5B30096A1A8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AC812B142548C5B30096A1A8 /* HunnyDooTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AC812B162548C5B30096A1A8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AC812B1F2548C5B30096A1A8 /* HunnyDooUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		AC812B112548C5B30096A1A8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AC812AF32548C5B20096A1A8 /* HunnyDoo */;
+			targetProxy = AC812B102548C5B30096A1A8 /* PBXContainerItemProxy */;
+		};
+		AC812B1C2548C5B30096A1A8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AC812AF32548C5B20096A1A8 /* HunnyDoo */;
+			targetProxy = AC812B1B2548C5B30096A1A8 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		AC812B002548C5B20096A1A8 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AC812B012548C5B20096A1A8 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		AC812B052548C5B30096A1A8 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AC812B062548C5B30096A1A8 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		AC812B212548C5B30096A1A8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		AC812B222548C5B30096A1A8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AC812B242548C5B30096A1A8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = M2KR5TEJPW;
+				INFOPLIST_FILE = HunnyDoo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.mariodiana.hunnydoo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		AC812B252548C5B30096A1A8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = M2KR5TEJPW;
+				INFOPLIST_FILE = HunnyDoo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.mariodiana.hunnydoo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		AC812B272548C5B30096A1A8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = M2KR5TEJPW;
+				INFOPLIST_FILE = HunnyDooTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.mariodiana.HunnyDooTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HunnyDoo.app/HunnyDoo";
+			};
+			name = Debug;
+		};
+		AC812B282548C5B30096A1A8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = M2KR5TEJPW;
+				INFOPLIST_FILE = HunnyDooTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.mariodiana.HunnyDooTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HunnyDoo.app/HunnyDoo";
+			};
+			name = Release;
+		};
+		AC812B2A2548C5B30096A1A8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = M2KR5TEJPW;
+				INFOPLIST_FILE = HunnyDooUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.mariodiana.HunnyDooUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = HunnyDoo;
+			};
+			name = Debug;
+		};
+		AC812B2B2548C5B30096A1A8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = M2KR5TEJPW;
+				INFOPLIST_FILE = HunnyDooUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.mariodiana.HunnyDooUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = HunnyDoo;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AC812AEF2548C5B20096A1A8 /* Build configuration list for PBXProject "HunnyDoo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AC812B212548C5B30096A1A8 /* Debug */,
+				AC812B222548C5B30096A1A8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AC812B232548C5B30096A1A8 /* Build configuration list for PBXNativeTarget "HunnyDoo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AC812B242548C5B30096A1A8 /* Debug */,
+				AC812B252548C5B30096A1A8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AC812B262548C5B30096A1A8 /* Build configuration list for PBXNativeTarget "HunnyDooTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AC812B272548C5B30096A1A8 /* Debug */,
+				AC812B282548C5B30096A1A8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AC812B292548C5B30096A1A8 /* Build configuration list for PBXNativeTarget "HunnyDooUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AC812B2A2548C5B30096A1A8 /* Debug */,
+				AC812B2B2548C5B30096A1A8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = AC812AEC2548C5B20096A1A8 /* Project object */;
+}
