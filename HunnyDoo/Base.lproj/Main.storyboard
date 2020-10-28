@@ -43,7 +43,13 @@
                             <constraint firstItem="jpk-UB-Hc0" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="rHP-hQ-GzY"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="mcg-Vg-M1l"/>
+                    <navigationItem key="navigationItem" id="mcg-Vg-M1l">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="plus" catalog="system" id="eU6-1K-1wL">
+                            <connections>
+                                <action selector="addTodoItem:" destination="BYZ-38-t0r" id="9we-Ln-UH5"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="jpk-UB-Hc0" id="AvG-or-pPH"/>
                     </connections>
@@ -70,6 +76,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="plus" catalog="system" width="128" height="113"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

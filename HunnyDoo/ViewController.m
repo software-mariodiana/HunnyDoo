@@ -36,11 +36,6 @@ NSString* const HunnyDooTableCellIdentifier = @"HunnyDooTableCellIdentifier";
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.title = @"To do";
-    self.navigationItem.rightBarButtonItem =
-        [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd
-                                                      target:self
-                                                      action:@selector(addTodoItem:)];
-    
     self.items = [NSMutableArray array];
 }
 
