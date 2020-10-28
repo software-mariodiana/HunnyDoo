@@ -33,10 +33,15 @@
     self.title = @"To do";
     self.navigationItem.rightBarButtonItem =
         [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd
-                                                      target:nil
-                                                      action:nil];
+                                                      target:self
+                                                      action:@selector(addTodoItem:)];
 }
 
+- (IBAction)addTodoItem:(id)sender
+{
+    //TODO: NOT IMPLEMENTED
+    NSLog(@"## %@ - %@", NSStringFromSelector(_cmd), self);
+}
 
 - (UITableViewCell *)tableView:(UITableView *)tableView
          cellForRowAtIndexPath:(NSIndexPath *)indexPath
