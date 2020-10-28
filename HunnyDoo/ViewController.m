@@ -22,6 +22,8 @@
 #import "ViewController.h"
 
 @interface ViewController () <UITableViewDataSource>
+@property (nonatomic, strong) NSMutableArray* items;
+@property (nonatomic, weak) IBOutlet UITableView* tableView;
 @end
 
 @implementation ViewController
@@ -35,28 +37,31 @@
         [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd
                                                       target:self
                                                       action:@selector(addTodoItem:)];
+    
+    self.items = [NSMutableArray array];
 }
 
 - (IBAction)addTodoItem:(id)sender
 {
-    //TODO: NOT IMPLEMENTED
-    NSLog(@"## %@ - %@", NSStringFromSelector(_cmd), self);
+    NSUInteger index = [[self items] count] + 1;
+    NSString* item = [NSString stringWithFormat:@"Item #%ld", index];
+    [[self items] addObject:item];
+    [[self tableView] reloadData];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView
          cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    //TODO: NOT IMPLEMENTED
-    NSLog(@"## %@ - %@", NSStringFromSelector(_cmd), self);
-    return nil;
+    UITableViewCell* cell = [tableView dequeueReusableCellWithIdentifier:@"HunnyDooTableCellIdentifier"];
+    cell.textLabel.text = [[self items] objectAtIndex:[indexPath row]];
+    
+    return cell;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView
  numberOfRowsInSection:(NSInteger)section
 {
-    //TODO: NOT IMPLEMENTED
-    NSLog(@"## %@ - %@", NSStringFromSelector(_cmd), self);
-    return 0;
+    return [[self items] count];
 }
 
 @end
