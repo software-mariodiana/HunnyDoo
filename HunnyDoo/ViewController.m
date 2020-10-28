@@ -21,6 +21,9 @@
 
 #import "ViewController.h"
 
+// This must match the string setup in the Storyboard.
+NSString* const HunnyDooTableCellIdentifier = @"HunnyDooTableCellIdentifier";
+
 @interface ViewController () <UITableViewDataSource>
 @property (nonatomic, strong) NSMutableArray* items;
 @property (nonatomic, weak) IBOutlet UITableView* tableView;
@@ -52,7 +55,7 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView
          cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell* cell = [tableView dequeueReusableCellWithIdentifier:@"HunnyDooTableCellIdentifier"];
+    UITableViewCell* cell = [tableView dequeueReusableCellWithIdentifier:HunnyDooTableCellIdentifier];
     cell.textLabel.text = [[self items] objectAtIndex:[indexPath row]];
     
     return cell;
