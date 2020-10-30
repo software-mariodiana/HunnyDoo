@@ -24,7 +24,7 @@
 // This must match the string setup in the Storyboard.
 NSString* const HunnyDooTableCellIdentifier = @"HunnyDooTableCellIdentifier";
 
-@interface ViewController () <UITableViewDataSource>
+@interface ViewController () <UITableViewDataSource, UITableViewDelegate>
 @property (nonatomic, strong) NSMutableArray* items;
 @property (nonatomic, weak) IBOutlet UITableView* tableView;
 @end
@@ -60,6 +60,14 @@ NSString* const HunnyDooTableCellIdentifier = @"HunnyDooTableCellIdentifier";
  numberOfRowsInSection:(NSInteger)section
 {
     return [[self items] count];
+}
+
+- (void)tableView:(UITableView *)tableView
+commitEditingStyle:(UITableViewCellEditingStyle)editingStyle
+forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [[self items] removeObjectAtIndex:[indexPath row]];
+    [tableView reloadData];
 }
 
 @end
