@@ -16,6 +16,7 @@
 		AC812B0A2548C5B30096A1A8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AC812B092548C5B30096A1A8 /* main.m */; };
 		AC812B142548C5B30096A1A8 /* HunnyDooTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AC812B132548C5B30096A1A8 /* HunnyDooTests.m */; };
 		AC812B1F2548C5B30096A1A8 /* HunnyDooUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = AC812B1E2548C5B30096A1A8 /* HunnyDooUITests.m */; };
+		ACF78694254CF5C40055B81A /* ItemDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ACF78693254CF5C40055B81A /* ItemDetailViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,8 @@
 		AC812B1A2548C5B30096A1A8 /* HunnyDooUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HunnyDooUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC812B1E2548C5B30096A1A8 /* HunnyDooUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HunnyDooUITests.m; sourceTree = "<group>"; };
 		AC812B202548C5B30096A1A8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ACF78692254CF5C40055B81A /* ItemDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ItemDetailViewController.h; sourceTree = "<group>"; };
+		ACF78693254CF5C40055B81A /* ItemDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ItemDetailViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +113,8 @@
 				AC812AFB2548C5B20096A1A8 /* SceneDelegate.m */,
 				AC812AFD2548C5B20096A1A8 /* ViewController.h */,
 				AC812AFE2548C5B20096A1A8 /* ViewController.m */,
+				ACF78692254CF5C40055B81A /* ItemDetailViewController.h */,
+				ACF78693254CF5C40055B81A /* ItemDetailViewController.m */,
 				AC812B002548C5B20096A1A8 /* Main.storyboard */,
 				AC812B032548C5B30096A1A8 /* Assets.xcassets */,
 				AC812B052548C5B30096A1A8 /* LaunchScreen.storyboard */,
@@ -270,6 +275,7 @@
 				AC812AF92548C5B20096A1A8 /* AppDelegate.m in Sources */,
 				AC812B0A2548C5B30096A1A8 /* main.m in Sources */,
 				AC812AFC2548C5B20096A1A8 /* SceneDelegate.m in Sources */,
+				ACF78694254CF5C40055B81A /* ItemDetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

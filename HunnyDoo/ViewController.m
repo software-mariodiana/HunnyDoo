@@ -21,6 +21,27 @@
 
 #import "ViewController.h"
 
+@interface NSDate (ISO8601)
+- (NSString *)canonicalTimestamp;
+@end
+
+@implementation NSDate (ISO8601)
+
+- (NSString *)canonicalTimestamp
+{
+    static NSISO8601DateFormatter* formatter;
+    static dispatch_once_t onceToken;
+    
+    dispatch_once(&onceToken, ^{
+        formatter = [[NSISO8601DateFormatter alloc] init];
+        formatter.formatOptions = NSISO8601DateFormatWithInternetDateTime;
+    });
+    
+    return [formatter stringFromDate:self];
+}
+
+@end
+
 // This must match the string setup in the Storyboard.
 NSString* const HunnyDooTableCellIdentifier = @"HunnyDooTableCellIdentifier";
 
@@ -47,11 +68,24 @@ NSString* const HunnyDooTableCellIdentifier = @"HunnyDooTableCellIdentifier";
     [[self tableView] reloadData];
 }
 
+//- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+//{
+//    // Get the new view controller using [segue destinationViewController].
+//    // Pass the selected object to the new view controller.
+//    NSLog(@"## %@ - %@", NSStringFromSelector(_cmd), self);
+//    NSLog(@"##     Sender: %@", sender);
+//    UIViewController* vc = [segue destinationViewController];
+//    NSLog(@"##     Destination: %@", vc);
+//}
+
 - (UITableViewCell *)tableView:(UITableView *)tableView
          cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     UITableViewCell* cell = [tableView dequeueReusableCellWithIdentifier:HunnyDooTableCellIdentifier];
     cell.textLabel.text = [[self items] objectAtIndex:[indexPath row]];
+    
+    //TODO: This is just a placeholder.
+    cell.detailTextLabel.text = [[NSDate now] canonicalTimestamp];
     
     return cell;
 }
@@ -68,6 +102,19 @@ forRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [[self items] removeObjectAtIndex:[indexPath row]];
     [tableView reloadData];
+}
+
+- (void)tableView:(UITableView *)tableView
+accessoryButtonTappedForRowWithIndexPath:(NSIndexPath *)indexPath
+{
+    NSLog(@"## %@ - %@", NSStringFromSelector(_cmd), self);
+    NSLog(@"##     tableView: %@", tableView);
+    NSLog(@"##     indexPath: %@", indexPath);
+    UIViewController* vc =
+        [[self storyboard] instantiateViewControllerWithIdentifier:@"ItemDetailViewController"];
+    
+    //TODO: Setup the view.
+    [self presentViewController:vc animated:YES completion:nil];
 }
 
 @end
