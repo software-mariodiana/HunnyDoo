@@ -82,10 +82,15 @@ NSString* const HunnyDooTableCellIdentifier = @"HunnyDooTableCellIdentifier";
          cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     UITableViewCell* cell = [tableView dequeueReusableCellWithIdentifier:HunnyDooTableCellIdentifier];
-    cell.textLabel.text = [[self items] objectAtIndex:[indexPath row]];
     
-    //TODO: This is just a placeholder.
-    cell.detailTextLabel.text = [[NSDate now] canonicalTimestamp];
+    UIListContentConfiguration* content = [UIListContentConfiguration subtitleCellConfiguration];
+    content.image = [UIImage systemImageNamed:@"pin.circle"];
+    content.imageProperties.tintColor = [UIColor purpleColor];
+    
+    content.text = [[self items] objectAtIndex:[indexPath row]];
+    content.secondaryText = [[NSDate now] canonicalTimestamp];
+    
+    cell.contentConfiguration = content;
     
     return cell;
 }
