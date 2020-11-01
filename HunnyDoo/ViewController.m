@@ -83,7 +83,7 @@ NSString* const HunnyDooTableCellIdentifier = @"HunnyDooTableCellIdentifier";
 {
     UITableViewCell* cell = [tableView dequeueReusableCellWithIdentifier:HunnyDooTableCellIdentifier];
     
-    UIListContentConfiguration* content = [UIListContentConfiguration subtitleCellConfiguration];
+    UIListContentConfiguration* content = cell.defaultContentConfiguration;
     content.image = [UIImage systemImageNamed:@"pin.circle"];
     content.imageProperties.tintColor = [UIColor purpleColor];
     
@@ -121,5 +121,7 @@ accessoryButtonTappedForRowWithIndexPath:(NSIndexPath *)indexPath
     //TODO: Setup the view.
     [self presentViewController:vc animated:YES completion:nil];
 }
+
+//- (void)showAddItemModal:
 
 @end
