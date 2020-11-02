@@ -23,7 +23,8 @@
 #import "ItemDetailViewController.h"
 
 @interface ItemDetailViewController ()
-
+@property (weak, nonatomic) IBOutlet UITextField *taskField;
+@property (weak, nonatomic) IBOutlet UIDatePicker *dueDatePicker;
 @end
 
 @implementation ItemDetailViewController
@@ -33,16 +34,31 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     NSLog(@"## %@ - %@", NSStringFromSelector(_cmd), self);
+    self.tableView.rowHeight = 44.0;
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (IBAction)cancel:(id)sender
+{
+    if ([self isNewItem]) {
+        [[self delegate] itemDidDelete:[self itemDetails]];
+    }
+    
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
-*/
+
+- (IBAction)done:(id)sender
+{
+    [[self delegate] itemDidUpdateWithDetails:[self itemDetails]];
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (NSDictionary *)itemDetails
+{
+    return @{
+        @"text": [[self taskField] text],
+        @"dueDate": [[self dueDatePicker] date],
+        @"index": [NSNumber numberWithInteger:[self index]]
+    };
+}
 
 @end

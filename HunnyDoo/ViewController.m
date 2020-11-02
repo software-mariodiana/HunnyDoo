@@ -20,6 +20,7 @@
 //  
 
 #import "ViewController.h"
+#import "ItemDetailViewController.h"
 
 @interface NSDate (ISO8601)
 - (NSString *)canonicalTimestamp;
@@ -42,10 +43,18 @@
 
 @end
 
+@interface Item : NSObject
+@property (nonatomic, copy) NSString* task;
+@property (nonatomic, copy) NSString* dueDate;
+@end
+
+@implementation Item
+@end
+
 // This must match the string setup in the Storyboard.
 NSString* const HunnyDooTableCellIdentifier = @"HunnyDooTableCellIdentifier";
 
-@interface ViewController () <UITableViewDataSource, UITableViewDelegate>
+@interface ViewController () <UITableViewDataSource, UITableViewDelegate, HunnyDooItemDelegate>
 @property (nonatomic, strong) NSMutableArray* items;
 @property (nonatomic, weak) IBOutlet UITableView* tableView;
 @end
@@ -62,21 +71,43 @@ NSString* const HunnyDooTableCellIdentifier = @"HunnyDooTableCellIdentifier";
 
 - (IBAction)addTodoItem:(id)sender
 {
-    NSUInteger index = [[self items] count] + 1;
-    NSString* item = [NSString stringWithFormat:@"Item #%ld", index];
+    NSUInteger index = [[self items] count];
+    
+    Item* item = [[Item alloc] init];
+    item.task = [NSString stringWithFormat:@"Item #%ld", index + 1];
+    item.dueDate = [[NSDate date] canonicalTimestamp];
     [[self items] addObject:item];
+    
+    [self showModalForItemAtIndex:index newItem:YES];
+}
+
+- (void)showModalForItemAtIndex:(NSUInteger)index newItem:(BOOL)newItem
+{
+    UINavigationController* detail =
+        [[self storyboard] instantiateViewControllerWithIdentifier:@"ItemDetailNavigationController"];
+    
+    id detailVC = [detail topViewController];
+    [detailVC setDelegate:self];
+    [detailVC setIndex:index];
+    [detailVC setNewItem:newItem];
+    
+    [self presentViewController:detail animated:YES completion:nil];
+}
+
+- (void)itemDidUpdateWithDetails:(id)itemDetails
+{
+    Item* item = [[self items] objectAtIndex:[[itemDetails valueForKey:@"index"] integerValue]];
+    [item setTask:[itemDetails valueForKey:@"text"]];
+    [item setDueDate:[[itemDetails valueForKey:@"dueDate"] canonicalTimestamp]];
     [[self tableView] reloadData];
 }
 
-//- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-//{
-//    // Get the new view controller using [segue destinationViewController].
-//    // Pass the selected object to the new view controller.
-//    NSLog(@"## %@ - %@", NSStringFromSelector(_cmd), self);
-//    NSLog(@"##     Sender: %@", sender);
-//    UIViewController* vc = [segue destinationViewController];
-//    NSLog(@"##     Destination: %@", vc);
-//}
+- (void)itemDidDelete:(id)itemDetails
+{
+    NSUInteger index = [[itemDetails valueForKey:@"index"] integerValue];
+    [[self items] removeObjectAtIndex:index];
+    [[self tableView] reloadData];
+}
 
 - (UITableViewCell *)tableView:(UITableView *)tableView
          cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -87,8 +118,10 @@ NSString* const HunnyDooTableCellIdentifier = @"HunnyDooTableCellIdentifier";
     content.image = [UIImage systemImageNamed:@"pin.circle"];
     content.imageProperties.tintColor = [UIColor purpleColor];
     
-    content.text = [[self items] objectAtIndex:[indexPath row]];
-    content.secondaryText = [[NSDate now] canonicalTimestamp];
+    Item* item = [[self items] objectAtIndex:[indexPath row]];
+    
+    content.text = [item task];
+    content.secondaryText = [item dueDate];
     
     cell.contentConfiguration = content;
     
@@ -112,16 +145,10 @@ forRowAtIndexPath:(NSIndexPath *)indexPath
 - (void)tableView:(UITableView *)tableView
 accessoryButtonTappedForRowWithIndexPath:(NSIndexPath *)indexPath
 {
-    NSLog(@"## %@ - %@", NSStringFromSelector(_cmd), self);
-    NSLog(@"##     tableView: %@", tableView);
-    NSLog(@"##     indexPath: %@", indexPath);
-    UIViewController* vc =
-        [[self storyboard] instantiateViewControllerWithIdentifier:@"ItemDetailViewController"];
+    NSUInteger index = [indexPath row];
     
-    //TODO: Setup the view.
-    [self presentViewController:vc animated:YES completion:nil];
+    //TODO: We must display current state!
+    [self showModalForItemAtIndex:index newItem:NO];
 }
-
-//- (void)showAddItemModal:
 
 @end

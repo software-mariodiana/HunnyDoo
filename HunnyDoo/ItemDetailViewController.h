@@ -22,10 +22,14 @@
 
 #import <UIKit/UIKit.h>
 
-NS_ASSUME_NONNULL_BEGIN
-
-@interface ItemDetailViewController : UIViewController
-
+@protocol HunnyDooItemDelegate <NSObject>
+- (void)itemDidUpdateWithDetails:(id)itemDetails;
+- (void)itemDidDelete:(id)itemDetails;
 @end
 
-NS_ASSUME_NONNULL_END
+
+@interface ItemDetailViewController : UITableViewController
+@property (nonatomic, assign, getter=isNewItem) BOOL newItem;
+@property (nonatomic, weak) id<HunnyDooItemDelegate> delegate;
+@property (nonatomic, assign) NSUInteger index; 
+@end
